@@ -1,0 +1,27 @@
+{
+  "name": "wifi-qr-connect-philips-baby-monitor",
+  "version": "1.0.0",
+  "description": "QR Code generator for Philips Baby Monitor Wi-Fi Connect",
+  "scripts": {
+    "dev": "http-server -p 8080 -o",
+    "test": "echo 'Manual testing - open http://0.0.0.0:8080'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alxbd/wifi-qr-connect-philips-baby-monitor"
+  },
+  "keywords": [
+    "philips",
+    "baby-monitor",
+    "qr-code",
+    "wifi"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

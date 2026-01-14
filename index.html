@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philips Baby Monitor Wi-Fi QR Code Generator</title>
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-index">
+    <main>
+        <!-- Form View -->
+        <div id="formView">
+            <header>
+                <h1>👶<br>Philips Baby Monitor<br>Wi-Fi QR Code Generator</h1>
+                <p>Generate QR codes to easily connect your Philips Baby Monitor to Wi-Fi networks.</p>
+            </header>
+
+            <form id="wifiForm">
+                <div>
+                    <label for="ssid">Wi-Fi Network Name (SSID):</label>
+                    <input
+                        type="text"
+                        id="ssid"
+                        name="ssid"
+                        maxlength="32"
+                        required
+                        placeholder="Enter your Wi-Fi network name"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div>
+                    <label for="password">Wi-Fi Password:</label>
+                    <input
+                        type="text"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        required
+                        placeholder="Enter your Wi-Fi password"
+                        autocomplete="off"
+                    >
+                    <div class="password-toggle">
+                        <input type="checkbox" id="showPassword" checked>
+                        <label for="showPassword">Show password</label>
+                    </div>
+                </div>
+
+                <button type="submit">Generate QR Code</button>
+                <a href="instructions.html">View detailed step-by-step instructions</a>
+            </form>
+
+
+        </div>
+
+        <!-- QR View -->
+        <div id="qrView" class="hidden">
+            <a href="#" class="back-link btn-primary" id="backBtn">← Back</a>
+            <p class="scan-label">Scan to Connect</p>
+            <h2 id="qrSSID"></h2>
+            <div id="qrCanvas"></div>
+            <div class="button-group">
+                <button id="downloadBtn">Download</button>
+                <button id="printBtn">Print</button>
+            </div>
+            <p class="tip">Download or print this QR code to quickly switch the camera to a different WiFi network next time.</p>
+
+            <div class="quick-instructions">
+                <h3>Quick Instructions:</h3>
+                <ol>
+                    <li>On the camera press and hold the <strong>NIGHTLIGHT 💡</strong> and <strong>LULLABY 🎵</strong> buttons <strong>together for 3 seconds</strong></li>
+                    <li>Wait for the nightlight (below the camera) to pulse soft orange</li>
+                    <li>The monitor is now ready to scan the QR code</li>
+                </ol>
+                <p>
+                    <a href="instructions.html">View full instructions →</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Open source project.
+            <a href="https://github.com/alxbd/wifi-qr-connect-philips-baby-monitor" target="_blank">View on GitHub</a>
+        </br><small>No affiliation with Philips. Use at your own risk.</small></p>
+    </footer>
+
+    <script src="js/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
